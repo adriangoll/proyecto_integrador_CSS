@@ -1,34 +1,79 @@
-.deLado{
-    float: left;
-    width: auto;
-    height: auto;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.centrado{
+body{
+    height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
+    background: #263048;
+    background: linear-gradient(to right, #809099, #263048);
+
 }
 
-.galeria{
-    margin: 5px;
-    border: 2px solid black;
-    float: left;
-    width: 33vw;
+.slider-container{
+    width: 500px;
+    height: 300px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
     border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
 }
-.galeria:hover{
-    transform: scale(1.25);
+.slider {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.6s ease;
+    position: relative;
 }
 
-div.galeria img{
+.section-slider {
+    width: calc(100% / 4);
+    height: 100%;
+    position: relative;
+}
+
+.section-slider img,
+.section-slider video{
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    position: relative;
+} 
+
+.boton-i,
+.boton-d {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: black;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
 }
 
-.descripcion{
-    padding: 15px;
-    text-align: center;
-    font-size: 30px;
-    text-decoration: underline;
-    color: blue;
+.boton-i:hover,
+.boton-d:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.boton-i {
+    left: 10px;
+}
+
+.boton-d {
+    right: 10px;
 }

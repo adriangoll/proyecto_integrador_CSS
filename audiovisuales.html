@@ -12,11 +12,13 @@
 </head>
 
 <body>
-
+    
     <header>
         <h1>Z4X, el robot</h1>
-        <nav>
-            <ul>
+        <button class="abrir-menu" id="abrir">Abrir</button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar">Cerrar</button>
+            <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="misiones.html">Misiones</a></li>
                 <li><a class="active" href="audiovisuales.html">Audiovisuales</a></li>
@@ -25,35 +27,39 @@
         </nav>
     </header>
 
-   
+    <main>
 
-    <section class="centrado">
-        <div class="deLado">
-            <video src="/assets/videos/video.mp4" autoplay controls muted height="400px"></video>
+
+    <section class="slider-container">
+        <div class="slider" id="slider">   
+            <div class="section-slider">
+                <video src="/assets/videos/video.mp4" autoplay controls muted></video>
+                <div class="descripcion">Z4X</div>
+            </div>
+            <div class="section-slider">
+                <img src="/assets/img/img3.png" alt="Glottis Imagen 1">
+                <div class="descripcion">Z4X</div>
+            </div>
+            <div class="section-slider">
+                <img src="/assets/img/img4.png" alt="Glottis Imagen 2">
+                <div class="descripcion">Z4X</div>
+            </div>
+                <div class="section-slider">
+                <img src="/assets/img/img5.png" alt="Glottis Imagen 3">
+                <div class="descripcion">Z4X</div>
+            </div>
         </div>
-        <div class="galeria">
-            <a href="/assets/img/img3.png" target="_blank"><img src="/assets/img/img3.png" alt="Glottis Imagen 1"
-                    width="600"></a>
-            <div class="descripcion">Z4X</div>
-        </div>
-        <div class="galeria">
-            <a href="/assets/img/img4.png" target="_blank"><img src="/assets/img/img4.png" alt="Glottis Imagen 2"
-                    width="600"></a>
-            <div class="descripcion">Z4X</div>
-        </div>
-        <div class="galeria">
-            <a href="/assets/img/img5.png" target="_blank"><img src="/assets/img/img5.png" alt="Glottis Imagen 3"
-                    width="600"></a>
-            <div class="descripcion">Z4X</div>
-        </div>
+        <div class="boton-i"><</div>
+            <div class="boton-d">></div>
     </section>
-
-
+</main> 
     <footer>
         <p>Derechos reservados &copy; 2023</p>
     </footer>
+    
 
-
+<script src="/scripts/hamburguesa.js"></script>
+<script src="scripts/slider.js"></script>
 </body>
 
 </html>
